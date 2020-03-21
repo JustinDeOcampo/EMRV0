@@ -31,6 +31,7 @@ class FormDev extends React.Component {
                                     placeholder = "Enter name of child"
                                     name = "nameOfChild"
                                 />
+                            {/*mother, father, guardian, self, other (typable) */}
                                 <TextFieldComp
                                     label = "Person Completing the Form "
                                     placeholder = "Enter name"
@@ -52,6 +53,7 @@ class FormDev extends React.Component {
                                 placeholder = "Enter Age"
                                 name = "age"
                             />
+                            {/*add pre-k - senior in high school, college*/}
                             <TextFieldComp
                                 label = "Grade: "
                                 placeholder = "Enter Grade"
@@ -132,7 +134,7 @@ class FormDev extends React.Component {
                             label = "SH:"
                         />
                         <h3 style ={{marginTop: '10px'}}>F. Review of Systems - Including Side Effects</h3>
-                        {/*Leave the default option as normal*/}
+                        {/*Leave the default option as none*/}
                         <Row>
                             <DropDownComp
                                 label = "Constitutional/General:"
@@ -180,41 +182,49 @@ class FormDev extends React.Component {
                         <h3 style ={{marginTop: '10px'}}>F. Physical Examination</h3>
 
                         <Row>
+                            {/*feet + in*/}
                             <TextFieldComp
                                 label = "Ht:"
                                 placeholder = "Enter Height"
                                 name = "ht"
                             />
+                            {/*lbs*/}
                             <TextFieldComp
                                 label = "Wt:"
                                 placeholder = "Enter Weight"
                                 name = "wt"
                             />
+                            {/*/*/}
                             <TextFieldComp
                                 label = "BP:"
                                 placeholder = "Enter BP"
                                 name = "bp"
                             />
+                            {/*/  per min*/}
                             <TextFieldComp
                                 label = "HeartRate:"
                                 placeholder = "Enter HR"
                                 name = "heartRate"
                             />
+                            {/*in or cm*/}
                             <TextFieldComp
                                 label = "OFC:"
                                 placeholder = "Enter ofc"
                                 name = "ofc"
                             />
+                            {/*change this to an arrow up or down for height and weight*/}
                             <TextFieldComp
-                                label = "Hw/Wt Δ:"
+                                label = "Ht/Wt Δ:"
                                 placeholder = "Enter difference in ht/wt"
                                 name = "htwt"
                             />
+                            {/*in*/}
                             <TextFieldComp
                                 label = "Abdominal Girth:"
                                 placeholder = "Enter Abdominal Girth"
                                 name = "abdominalGirth"
                             />
+                            {/**/}
                             <TextFieldComp
                                 label = "BMI:"
                                 placeholder = "Enter BMI"
