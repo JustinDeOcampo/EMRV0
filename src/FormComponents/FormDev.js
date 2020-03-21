@@ -16,7 +16,8 @@ const layout = {
     },
 };
 
-class FormDev extends React.Component {
+
+class FormDev extends React.Component{
     render() {
         return (
             <div>
@@ -88,191 +89,12 @@ class FormDev extends React.Component {
                                 b = "N"
                             />
                         </Row>
-
                         <h1>I. History</h1>
-                        {/*Fix this label spacing*/}
                             <TextAreaComp
-                                label = "A. What is your chief concern/diagnoses?"
+                                label = "A. What is your chief concern/current diagnosis?"
                                 placeholder ="Enter details here"
                                 name = "chiefConcern"
                             />
-                        <TextAreaComp
-                            label = "B. Interval History: (HPI) (B Section for Doctor Only)"
-                            placeholder ="Enter details here"
-                            name = "intervalHistory"
-                        />
-                        <h3>C. What current interventions is your child receiving?</h3>
-                        {/*Fix options here*/}
-                        <DropDownComp
-                            label = ""
-                        />
-                        {/*Design this drawer later, and make it the new medication data appear below the button*/}
-                        <h3>D. What Current Medications/Supplements is your child taking?</h3>
-                        <DrawerComp
-                            buttonLabel = "Add Current Medications"
-                        />
-                        <Row>
-                            <RadioComp2
-                                label = "Medication Allergies?"
-                                a = "Y"
-                                b = "N"
-                            />
-                            <RadioComp2
-                                label = "Medication Effective?"
-                                a = "Y"
-                                b = "N"
-                            />
-                        </Row>
-
-                        <h3>E. Past Medical / Family / Social History</h3>
-                        {/*Fix options here*/}
-                        <DropDownComp
-                             label = "FH:"
-                        />
-                        {/*Fix options here*/}
-                        <DropDownComp
-                            label = "SH:"
-                        />
-                        <h3 style ={{marginTop: '10px'}}>F. Review of Systems - Including Side Effects</h3>
-                        {/*Leave the default option as none*/}
-                        <Row>
-                            <DropDownComp
-                                label = "Constitutional/General:"
-                            />
-                            <DropDownComp
-                                label = "Eyes:"
-                            />
-                            <DropDownComp
-                                label = "Cardio:"
-                            />
-                            <DropDownComp
-                                label = "Gastro-Intestinal"
-                            />
-                            <DropDownComp
-                                label = "Musculoskeletal"
-                            />
-                        </Row>
-                        <Row>
-
-                            <DropDownComp
-                                label = "Neurology"
-                            />
-                            <DropDownComp
-                                label = "Allergy"
-                            />
-                            <DropDownComp
-                                label = "Endocrinology"
-                            />
-                            <DropDownComp
-                                label = "ENT"
-                            />
-                            <DropDownComp
-                                label = "Respiratory"
-                            />
-                        </Row>
-                        <Row>
-                            <DropDownComp
-                                label = "GU"
-                            />
-                            <DropDownComp
-                                label = "Skin"
-                            />
-                        </Row>
-
-                        <h3 style ={{marginTop: '10px'}}>F. Physical Examination</h3>
-
-                        <Row>
-                            {/*feet + in*/}
-                            <TextFieldComp
-                                label = "Ht:"
-                                placeholder = "Enter Height"
-                                name = "ht"
-                            />
-                            {/*lbs*/}
-                            <TextFieldComp
-                                label = "Wt:"
-                                placeholder = "Enter Weight"
-                                name = "wt"
-                            />
-                            {/*/*/}
-                            <TextFieldComp
-                                label = "BP:"
-                                placeholder = "Enter BP"
-                                name = "bp"
-                            />
-                            {/*/  per min*/}
-                            <TextFieldComp
-                                label = "HeartRate:"
-                                placeholder = "Enter HR"
-                                name = "heartRate"
-                            />
-                            {/*in or cm*/}
-                            <TextFieldComp
-                                label = "OFC:"
-                                placeholder = "Enter ofc"
-                                name = "ofc"
-                            />
-                            {/*change this to an arrow up or down for height and weight*/}
-                            <TextFieldComp
-                                label = "Ht/Wt Δ:"
-                                placeholder = "Enter difference in ht/wt"
-                                name = "htwt"
-                            />
-                            {/*in*/}
-                            <TextFieldComp
-                                label = "Abdominal Girth:"
-                                placeholder = "Enter Abdominal Girth"
-                                name = "abdominalGirth"
-                            />
-                            {/**/}
-                            <TextFieldComp
-                                label = "BMI:"
-                                placeholder = "Enter BMI"
-                                name = "bmi"
-                            />
-                            <Divider/>
-                            <DropDownComp
-                                label = "Constitutional"
-                            />
-                            <DropDownComp
-                                label = "Dysmorphisms"
-                            />
-                            <DropDownComp
-                                label = "Head/Eyes"
-                            />
-                            <DropDownComp
-                                label = "ENT"
-                            />
-                            <DropDownComp
-                                label = "Neck"
-                            />
-                            <DropDownComp
-                                label = "Cardiovascular"
-                            />
-                            <DropDownComp
-                                label = "Respiratory"
-                            />
-                            <DropDownComp
-                                label = "GI"
-                            />
-                            <DropDownComp
-                                label = "GU"
-                            />
-                            <DropDownComp
-                                label = "Musculoskeletal"
-                            />
-                            <DropDownComp
-                                label = "Skin"
-                            />
-                            <DropDownComp
-                                label = "Neurological"
-                            />
-                            <DropDownComp
-                                label = "Hematology"
-                            />
-
-
-                        </Row>
                  </Form>
                 </main>
             </div>
