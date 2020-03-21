@@ -4,7 +4,7 @@ import FormDev from "../FormComponents/FormDev";
 import FormSym from "../FormComponents/FormSym";
 import FormSubmit from "../FormComponents/FormSubmit";
 
-const { Header, Content, Footer } = Layout;
+const { Header } = Layout;
 const { TabPane } = Tabs;
 const operations = <Button>Export File</Button>;
 
@@ -37,12 +37,13 @@ class LayOut extends React.Component {
         };
     }
 
-    next() {
-        const current = this.state.current + 1;
-        this.setState({ current });
-    }
+
     prev() {
         const current = this.state.current - 1;
+        this.setState({ current });
+    }
+    next() {
+        const current = this.state.current + 1;
         this.setState({ current });
     }
 
@@ -66,6 +67,12 @@ class LayOut extends React.Component {
                     <div className="steps-content">{steps[current].content}</div>
 
                     <div className="steps-action">
+
+                        {current > 0 && (
+                            <Button style={{textAlign: 'right'}} style={{ margin: 8 }} onClick={() => this.prev()}>
+                                Previous
+                            </Button>
+                        )}
                         {current < steps.length - 1 && (
                             <Button type="primary" onClick={() => this.next()}>
                                 Next
@@ -74,11 +81,6 @@ class LayOut extends React.Component {
                         {current === steps.length - 1 && (
                             <Button style={{textAlign: 'right'}} type="primary" onClick={() => message.success('Processing complete!')}>
                                 Done
-                            </Button>
-                        )}
-                        {current > 0 && (
-                            <Button style={{textAlign: 'right'}} style={{ margin: 8 }} onClick={() => this.prev()}>
-                                Previous
                             </Button>
                         )}
                     </div>

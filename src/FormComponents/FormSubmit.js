@@ -1,5 +1,5 @@
 import React from 'react'
-import { Form, Input, Button, Checkbox } from 'antd';
+import {Form, Input, Button} from 'antd';
 
 const layout = {
     labelCol: { span: 8 },
@@ -29,6 +29,7 @@ class FormSubmit extends React.Component{
                 onFinishFailed={onFinishFailed}
             >
                 <Form.Item {...tailLayout}>
+
                     <Button type="primary" htmlType="submit">
                         Submit
                     </Button>
