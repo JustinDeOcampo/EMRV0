@@ -2,10 +2,6 @@ import React from 'react'
 import { Layout, Tabs, Button } from 'antd';
 import FormDev from "../FormComponents/FormDev";
 import FormSym from "../FormComponents/FormSym";
-import FormPhys from "../FormComponents/FormPhys";
-import FormPlan from "../FormComponents/FormPlan";
-import FormMDM from "../FormComponents/FormMDM";
-import FormExam from "../FormComponents/FormExam";
 
 const { Header, Content, Footer } = Layout;
 const { TabPane } = Tabs;
@@ -34,16 +30,6 @@ class LayOut extends React.Component {
                             </TabPane>
                             <TabPane tab="Symptoms Checklist" key="2">
                                 <FormSym/>
-                            </TabPane>
-
-                            <TabPane tab="Exam" key="4">
-                                <FormExam/>
-                            </TabPane>
-                            <TabPane tab="Medical Decision Making" key="5">
-                                <FormMDM/>
-                            </TabPane>
-                            <TabPane tab="Plan" key="6">
-                                <FormPlan/>
                             </TabPane>
                         </Tabs>
 
