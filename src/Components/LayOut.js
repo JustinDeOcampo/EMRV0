@@ -35,10 +35,7 @@ class LayOut extends React.Component {
                             <TabPane tab="Symptoms Checklist" key="2">
                                 <FormSym/>
                             </TabPane>
-                            {/* <TabPane tab="Physical Examination" key="3">
-                                <FormPhys/>
-                            </TabPane>
-                            */}
+
                             <TabPane tab="Exam" key="4">
                                 <FormExam/>
                             </TabPane>
