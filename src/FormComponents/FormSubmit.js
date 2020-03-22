@@ -2,19 +2,13 @@ import React from 'react'
 
 import '../styles/style.css'
 import ExportButton from '../Components/ExportButton';
-
-const layout = {
-    labelCol: { span: 8 },
-    wrapperCol: { span: 16 },
-};
-
-
-
+import * as PropTypes from 'prop-types';
 
 class FormSubmit extends React.Component{
 
     render(){
-        return(
+      const { divIdsToPrint } = this.props;
+      return(
             <div>
                 <div className={"centered"}>
                     {"You are now finished with the form."}
@@ -25,12 +19,16 @@ class FormSubmit extends React.Component{
                 </div>
 
                 <div style = {{paddingBottom: '10px'}} className={"centered"}>
-                  <ExportButton divIdToPrint="form-content-to-pdf" pdfName="melmed-forms"/>
+                  <ExportButton divIdsToPrint={divIdsToPrint} pdfName="melmed-forms"/>
                 </div>
             </div>
 
         )
     }
 }
+
+FormSubmit.propTypes = {
+  divIdsToPrint: PropTypes.arrayOf(PropTypes.string).isRequired
+};
 
 export default FormSubmit
