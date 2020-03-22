@@ -48,9 +48,8 @@ export default class Export extends Component {
       <div className="mb5">
         <Button size='large'
                 type="primary"
-                htmlType="submit"
                 onClick={() => this.printDocument(divIdToPrint)}>
-          Print
+          Export to PDF
         </Button>
       </div>
     </div>);
