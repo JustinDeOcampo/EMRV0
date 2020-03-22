@@ -42,7 +42,6 @@ class LayOut extends React.Component {
               </div>
             </div>
           </Content>
-          <Divider/>
           <FormSubmit/>
         </div>
       </Layout>
