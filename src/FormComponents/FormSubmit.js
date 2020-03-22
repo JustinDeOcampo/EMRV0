@@ -25,7 +25,7 @@ class FormSubmit extends React.Component{
                     {"Please click below to submit and export."}
                 </div>
 
-                <div className={"centered"}>
+                <div style = {{paddingBottom: '10px'}} className={"centered"}>
                   <ExportButton divIdToPrint="form-content-to-pdf" pdfName="melmed-forms"/>
                 </div>
             </div>
