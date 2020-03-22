@@ -1,12 +1,11 @@
 import React from 'react'
-import {Row, Form, Input} from "antd";
+import {Row, Form} from "antd";
 import {TextFieldComp, DateInputComp} from "../Components/TextFieldComp";
 import DatePickerComp from "../Components/DatePickerComp";
 import {RadioComp2} from "../Components/RadioComp";
 import TextAreaComp from "../Components/TextAreaComp";
 import DropDownComp from "../Components/DropDownComp";
-import FormSym from "./FormSym";
-import FormSubmit from "./FormSubmit";
+
 import '../styles/style.css'
 
 
@@ -60,7 +59,7 @@ class FormDev extends React.Component{
                             />
                             <TextFieldComp
                                 label = "PCP: "
-                                placeholder = "Enter PCP"
+                                placeholder = "Enter Primary care provider"
                                 name = "pcp"
                             />
                         </Row>

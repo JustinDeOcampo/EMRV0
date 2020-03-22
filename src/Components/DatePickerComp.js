@@ -11,17 +11,19 @@ class DatePickerComp extends React.Component {
     render() {
         const {myProp} = this.props;
         return (
-            <Col style ={{margin: '7px'}} span = {4}>
-                <Row>
-                    <label  className = "dateLabel" >{this.props.label}</label>
-                </Row>
-                <Row>
-                    <DatePicker
-                        onChange = {onChange}
-                        size = {"medium"}
-                        style ={{width: '100%'}}
-                    />
-                </Row>
+            <Col style ={{margin: '6px'}} span = {4}>
+                <div style = {{width: '265px'}}>
+                    <Row>
+                        <label  className = "dateLabel" >{this.props.label}</label>
+                    </Row>
+                    <Row>
+                        <DatePicker
+                            onChange = {onChange}
+                            size = {"medium"}
+                            style ={{width: '100%'}}
+                        />
+                    </Row>
+                </div>
 
             </Col>
 

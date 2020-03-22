@@ -17,13 +17,12 @@ export class TextAreaComp extends React.Component {
         const {myProp} = this.props;
         return (
 
-            <Col span = {4}>
+            <Col >
                 <Form.Item
                     name = {this.props.name}
                 >
                 <h3>{this.props.label}</h3>
-                    <TextArea style ={{width: '500px'}} rows = {5} />
-
+                    <Input.TextArea style ={{width: 700}} rows = {5} />
                 </Form.Item>
             </Col>
         )
