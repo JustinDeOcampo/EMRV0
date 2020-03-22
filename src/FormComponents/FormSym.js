@@ -16,7 +16,6 @@ class FormSym extends React.Component {
                         label = "Fails to give attention to details or makes careless mistakes"
                         name ="1"
                     />
-
                     <SympComp
                         label = "Has difficulty sustaining attention in tasks"
                         name ="2"
