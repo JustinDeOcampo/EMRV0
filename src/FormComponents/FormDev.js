@@ -46,10 +46,8 @@ class FormDev extends React.Component{
                                 name = "age"
                             />
                             {/*add pre-k - senior in high school, college*/}
-                            <TextFieldComp
+                            <DropDownComp
                                 label = "Grade: "
-                                placeholder = "Enter Grade"
-                                name = "grade"
                             />
                             {/* Templates could go here of all schools in az*/}
                             <TextFieldComp

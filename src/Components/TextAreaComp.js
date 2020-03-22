@@ -22,7 +22,9 @@ export class TextAreaComp extends React.Component {
                     name = {this.props.name}
                 >
                 <h3>{this.props.label}</h3>
-                    <Input.TextArea style ={{width: 700}} rows = {5} />
+                    <div id = "textarea" contentEditable="true">
+
+                    </div>
                 </Form.Item>
             </Col>
         )

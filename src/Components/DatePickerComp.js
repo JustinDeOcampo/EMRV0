@@ -12,7 +12,7 @@ class DatePickerComp extends React.Component {
         const {myProp} = this.props;
         return (
             <Col style ={{margin: '6px'}} span = {4}>
-                <div style = {{width: '265px'}}>
+                <div style = {{width: '260px'}}>
                     <Row>
                         <label  className = "dateLabel" >{this.props.label}</label>
                     </Row>

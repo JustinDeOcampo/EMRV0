@@ -66,7 +66,7 @@ class DateInputComp extends React.Component{
                         </label>
                     </div>
                     <MaskedInput
-                        style = {{width: '265px'}}
+                        style = {{width: '260px'}}
                         mask="11/11/1111"
                         placeholder="MM/DD/YYYY"
                         size="11"
