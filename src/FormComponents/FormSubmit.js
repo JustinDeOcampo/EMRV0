@@ -15,7 +15,7 @@ class FormSubmit extends React.Component{
 
     render(){
         return(
-            <div style ={{paddingTop: '30px'}}>
+            <div style ={{paddingTop: '30px'}} className={"centered"}>
 
                 <div className={"centered"}>
                     {"You are now finished with the form."}
@@ -26,7 +26,7 @@ class FormSubmit extends React.Component{
                 </div>
 
                 <div className = "centered">
-                  <ExportButton divIdToPrint={"form-content-to-pdf"}/>
+                  <ExportButton divIdToPrint="form-content-to-pdf" pdfName="melmed-forms"/>
                 </div>
             </div>
 

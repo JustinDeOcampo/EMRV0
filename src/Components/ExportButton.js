@@ -9,7 +9,7 @@ export default class Export extends Component {
     super(props);
   }
 
-  async printDocument(div_id) {
+  async printDocument(pdfName, div_id) {
     const input = document.getElementById(div_id);
     html2canvas(input, {
       scrollX: 0,
@@ -34,20 +34,20 @@ export default class Export extends Component {
           pdf.addImage(imgData, 'PNG', 0, position, imgWidth, imgHeight + 15);
           heightLeft -= pageHeight;
         }
-        pdf.save("download.pdf");
+        pdf.save(pdfName + ".pdf");
       })
     ;
   }
 
   render() {
-    const { divIdToPrint } = this.props;
+    const { pdfName, divIdToPrint } = this.props;
     return (
     <div>
       <div id="myMm" style={{height: "1mm"}} />
       <div className="mb5">
         <Button size='large'
                 type="primary"
-                onClick={() => this.printDocument(divIdToPrint)}>
+                onClick={() => this.printDocument(pdfName, divIdToPrint)}>
           Export to PDF
         </Button>
       </div>
@@ -56,5 +56,6 @@ export default class Export extends Component {
 }
 
 Export.propTypes = {
+  pdfName: PropTypes.string.isRequired,
   divIdToPrint: PropTypes.string.isRequired
 };
