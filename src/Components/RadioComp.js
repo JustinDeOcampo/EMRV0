@@ -62,13 +62,13 @@ class RadioComp2 extends React.Component {
         const {myProp} = this.props;
         return (
 
-            <Col style = {{paddingLeft: '20px'}} span = {4}>
+            <Col style = {{paddingLeft: '25px'}} span = {8}>
                 <div>
-                    <Row>
+                    <div style = {{paddingTop: '6px'}}>
                         <label>{this.props.label}</label>
-                    </Row>
+                    </div>
                     <Row>
-                        <Radio.Group style ={{paddingTop:'5px'}}onChange={this.onChange} value={this.state.value}>
+                        <Radio.Group style ={{paddingTop:'7px'}}onChange={this.onChange} value={this.state.value}>
                             <Radio value={1}>
                                 {this.props.a}
                             </Radio>
