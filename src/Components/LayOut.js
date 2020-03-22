@@ -3,6 +3,7 @@ import { Layout, Button, Steps, message  } from 'antd';
 import FormDev from "../FormComponents/FormDev";
 import FormSym from "../FormComponents/FormSym";
 import FormSubmit from "../FormComponents/FormSubmit";
+import ExportButton from './ExportButton';
 
 const { Header } = Layout;
 
@@ -60,6 +61,7 @@ class LayOut extends React.Component {
                     <h1 style = {{color: 'white'}}>Melmed Center</h1>
                 </Header>
 
+                <ExportButton/>
 
                 <div style = {{margin: 32}}>
                     {/*Renders first, second, and the submit step */}
@@ -70,7 +72,7 @@ class LayOut extends React.Component {
                     </Steps>
 
                     {/*Renders the content of the current step*/}
-                    <div className="steps-content">
+                    <div className="steps-content" id="divToPrint">
                         {steps[current].content}
                     </div>
 
