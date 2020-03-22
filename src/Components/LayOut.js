@@ -32,7 +32,7 @@ class LayOut extends React.Component {
               paddingLeft: 80,
               paddingTop: 40,
               paddingRight: 80,
-              paddingBottom: 50,
+              paddingBottom: 5,
               minHeight: 380
             }}>
               <FormDev/>
@@ -44,7 +44,7 @@ class LayOut extends React.Component {
           <div
             className="site-layout-background" style={{
             paddingLeft: 80,
-            paddingTop: 10,
+            paddingTop: 40,
             paddingRight: 80,
             paddingBottom: 50,
             minHeight: 380
