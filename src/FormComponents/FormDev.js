@@ -1,5 +1,5 @@
 import React from 'react'
-import {Row, Form} from "antd";
+import {Row, Form, Input} from "antd";
 import {TextFieldComp, DateInputComp} from "../Components/TextFieldComp";
 import DatePickerComp from "../Components/DatePickerComp";
 import {RadioComp2} from "../Components/RadioComp";
@@ -7,14 +7,6 @@ import TextAreaComp from "../Components/TextAreaComp";
 import DropDownComp from "../Components/DropDownComp";
 import '../styles/style.css'
 
-const layout = {
-    labelCol: {
-        span: 8,
-    },
-    wrapperCol: {
-        span: 16,
-    },
-};
 
 
 class FormDev extends React.Component{

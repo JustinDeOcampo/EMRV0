@@ -101,7 +101,9 @@ class SympComp extends React.Component{
     render(){
         const {myProp} = this.props;
         return(
-           <Form.Item>
+           <Form.Item
+               name = {this.props.name}
+           >
                <Radio.Group onChange={this.onChange} value={this.state.value}>
                    <Radio value={1}>0</Radio>
                    <Radio value={2}>1</Radio>

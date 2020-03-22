@@ -3,6 +3,7 @@ import {Row, Col, Input, Select,Cascader } from 'antd';
 import MaskedInput from 'react-maskedinput'
 
 
+
 {/*
 Template
         <TextFieldComp
@@ -20,14 +21,15 @@ class TextFieldComp extends React.Component {
                 <Row>
                     <label style = {{width: '300px'}} >{this.props.label}</label>
                 </Row>
-
                 <Input
                     style = {{width: '100%' }}
+                    name = {this.props.name}
+                    id = {this.props.id}
                     placeholder = {this.props.placeholder}
-                    suffix = {this.props.suffix}
+                    onChange = {this.props.onChange}
+                    onBlur = {this.props.onBlur}
+                    value = {this.props.value}
                 />
-
-
             </Col>
         )
     }
