@@ -7,6 +7,9 @@ import * as PropTypes from 'prop-types';
 export default class Export extends Component {
   constructor(props) {
     super(props);
+    this.state = {
+      ready: "READY"
+    };
   }
 
   async printDocument(pdfName, div_id) {
