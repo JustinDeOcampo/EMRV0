@@ -44,7 +44,7 @@ class DropDownComp extends React.Component {
                         <label> {this.props.label} </label>
                     </Row>
                     <Select
-                        style={{ width: '275px', paddingTop:'8px'}}
+                        style={{ width: '267px', paddingTop:'8px'}}
                         placeholder="Click here"
                         dropdownRender={menu => (
                             <div>

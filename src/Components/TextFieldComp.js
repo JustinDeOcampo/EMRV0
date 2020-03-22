@@ -59,14 +59,14 @@ class DateInputComp extends React.Component{
     render(){
         return(
             <Col>
-                <div style = {{paddingLeft: '60px'}}>
+                <div style = {{paddingLeft: '62px'}}>
                     <div style = {{paddingTop: '8px'}}>
                         <label>
                             Date of Birth:
                         </label>
                     </div>
                     <MaskedInput
-                        style = {{width: '200px'}}
+                        style = {{width: '265px'}}
                         mask="11/11/1111"
                         placeholder="MM/DD/YYYY"
                         size="11"
