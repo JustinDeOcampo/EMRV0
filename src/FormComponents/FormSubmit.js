@@ -15,8 +15,7 @@ class FormSubmit extends React.Component{
 
     render(){
         return(
-            <div style ={{paddingTop: '30px'}} >
-
+            <div>
                 <div className={"centered"}>
                     {"You are now finished with the form."}
                 </div>
