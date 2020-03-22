@@ -19,7 +19,7 @@ class DatePickerComp extends React.Component {
                     <DatePicker
                         onChange = {onChange}
                         size = {"medium"}
-                        style ={{width: '250px'}}
+                        style ={{width: '100%'}}
                     />
                 </Row>
 
