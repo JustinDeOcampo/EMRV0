@@ -21,6 +21,7 @@ class LayOut extends React.Component {
 
     render() {
         return (
+          <div id="form-content-to-pdf">
             <Layout>
                 {/*header styling*/}
                 <Header style={{ zIndex: 1, width: '100%', height: '85px'}}>
@@ -38,6 +39,7 @@ class LayOut extends React.Component {
               </Content>
               <Footer style={{textAlign: 'center'}}>4848 E. Cactus Rd. Ste. #940, Scottsdale, AZ 85254 | Phone (480) 443-0050 | Fax (480) 443-4018 | Toll Free 877-587-1770</Footer>
             </Layout>
+          </div>
         )
     }
 }
