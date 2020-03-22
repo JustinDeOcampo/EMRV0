@@ -38,34 +38,40 @@ class DropDownComp extends React.Component {
         const { items, name } = this.state;
         const {myProp} = this.props;
         return (
-            <Col span = {4}>
-                <Row>
-                    <label> {this.props.label} </label>
-                </Row>
-                <Select
-                    style={{ width: '100%', paddingTop:'10px' }}
-                    placeholder="Click here"
-                    dropdownRender={menu => (
-                        <div>
-                            {menu}
-                            <Divider style={{ margin: '4px 0' }} />
-                            <div style={{ display: 'flex', flexWrap: 'nowrap', padding: 8 }}>
-                                <Input style={{ flex: 'auto' }} value={name} onChange={this.onNameChange} />
-                                <a
-                                    style={{ flex: 'none', padding: '8px', display: 'block', cursor: 'pointer' }}
-                                    onClick={this.addItem}
-                                >
-                                    <PlusOutlined /> Add item
-                                </a>
+            <div style = {{paddingLeft: '10px'}}>
+                <Col >
+                    <div style = {{paddingTop: '6px'}}>
+                        <label> {this.props.label} </label>
+                    </div>
+                    <Select
+                        style={{ width: '267px', paddingTop:'2px'}}
+                        placeholder="Click here"
+                        dropdownRender={menu => (
+                            <div>
+                                {/*rendering menu*/}
+                                {menu}
+
+                                <Divider style={{ margin: '4px 0' }} />
+                                {/*button for adding item*/}
+                                <div style={{ display: 'flex', flexWrap: 'nowrap', padding: 8 }}>
+                                    <Input style={{ flex: 'auto' }} value={name} onChange={this.onNameChange} />
+                                    <a
+                                        style={{ flex: 'none', padding: '8px', display: 'block', cursor: 'pointer' }}
+                                        onClick={this.addItem}
+                                    >
+                                        <PlusOutlined /> Add item
+                                    </a>
+                                </div>
+
                             </div>
-                        </div>
-                    )}
-                >
-                    {items.map(item => (
-                        <Option key={item}>{item}</Option>
-                    ))}
-                </Select>
-            </Col>
+                        )}
+                    >
+                        {items.map(item => (
+                            <Option key={item}>{item}</Option>
+                        ))}
+                    </Select>
+                </Col>
+            </div>
         )
     }
 }
