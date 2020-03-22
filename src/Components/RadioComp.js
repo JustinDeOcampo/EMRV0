@@ -91,6 +91,7 @@ class SympComp extends React.Component{
             value: e.target.value,
         });
     };
+
     render(){
         const {myProp} = this.props;
         return(

@@ -1,13 +1,13 @@
 import React from 'react'
-import {Form, Input, Button} from 'antd';
+import {Form, Input, Button, Row} from 'antd';
+import './myStyles.css'
+import Text from "antd/es/typography/Text";
 
 const layout = {
     labelCol: { span: 8 },
     wrapperCol: { span: 16 },
 };
-const tailLayout = {
-    wrapperCol: { offset: 8, span: 16 },
-};
+
 
 
 class FormSubmit extends React.Component{
@@ -20,21 +20,34 @@ class FormSubmit extends React.Component{
         const onFinishFailed = errorInfo => {
             console.log('Failed:', errorInfo);
         };
-        return(
-            <Form
-                {...layout}
-                name="basic"
-                initialValues={{ remember: true }}
-                onFinish={onFinish}
-                onFinishFailed={onFinishFailed}
-            >
-                <Form.Item {...tailLayout}>
 
-                    <Button type="primary" htmlType="submit">
-                        Submit
-                    </Button>
-                </Form.Item>
-            </Form>
+        return(
+            <div style ={{paddingTop: '30px'}}>
+
+                <div className={"centered"}>
+                    {"You are now finished with the form."}
+                </div>
+
+                <div style = {{paddingBottom: '20px'}} className={"centered"}>
+                    {"Please click below to submit and export."}
+                </div>
+
+                <div className = "centered">
+                    <Form
+                        name="basic"
+                        initialValues={{ remember: true }}
+                        onFinish={onFinish}
+                        onFinishFailed={onFinishFailed}
+                    >
+                        <Form.Item >
+                            <Button size='large' type="primary" htmlType="submit">
+                                Submit
+                            </Button>
+                        </Form.Item>
+                    </Form>
+                </div>
+            </div>
+
         )
     }
 }

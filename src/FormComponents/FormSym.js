@@ -54,123 +54,123 @@ class FormSym extends React.Component {
                     />
                     <SympComp
                         label = "Difficulty remaining seated when expected"
-                        name =""
+                        name ="11"
                     />
                     <SympComp
                         label = "Runs about or climbs excessively at inappropriate times"
-                        name =""
+                        name ="12"
                     />
                     <SympComp
                         label = "Has difficulty playing quietly"
-                        name =""
+                        name ="13"
                     />
                     <SympComp
                         label = "Is 'on the go' or often acts as if 'driven by a motor'"
-                        name =""
+                        name ="14"
                     />
                     <SympComp
                         label = "Talks excessively"
-                        name =""
+                        name ="15"
                     />
                     <SympComp
                     label = "Blurts out answers before questions complete"
-                    name =""
+                    name ="16"
                     />
                     <SympComp
                         label = "Has difficulty awaiting turn"
-                        name =""
+                        name ="17"
                     />
                     <SympComp
                         label = "Interrupts or intrudes on others"
-                        name =""
+                        name ="18"
                     />
                     <SympComp
                         label = "Difficulty with homework completion"
-                        name =""
+                        name ="19"
                     />
                     <SympComp
                         label = "Problematic school performance"
-                        name =""
+                        name ="20"
                     />
                     <SympComp
                         label = "Difficulty in social situations with peers"
-                        name =""
+                        name ="21"
                     />
                     <SympComp
                         label = "Challenges in the morning routine"
-                        name =""
+                        name ="22"
                     />
                     <SympComp
                         label = "Difficulty with time management"
-                        name =""
+                        name ="23"
                     />
                     <SympComp
                         label = "Difficulty with siblings"
-                        name =""
+                        name ="24"
                     />
                     <SympComp
                         label = "Difficulty managing anger or disappointment"
-                        name =""
+                        name ="25"
                     />
                     <SympComp
                         label = "Oppositional with parents"
-                        name =""
+                        name ="26"
                     />
                     <SympComp
                         label = "Aggressive verbally"
-                        name =""
+                        name ="27"
                     />
                     <SympComp
                         label = "Aggressive physically"
-                        name =""
+                        name ="28"
                     />
                     <SympComp
                         label = "Mood changes quickly and drastically"
-                        name =""
+                        name ="29"
                     />
                     <SympComp
                         label = "Less social with friends, looks dull or flat"
-                        name =""
+                        name ="30"
                     />
                     <SympComp
                         label = "Is tired during the day"
-                        name =""
+                        name ="31"
                     />
                     <SympComp
                         label = "Is dull, flat, “loss of spirit” not him or herself"
-                        name =""
+                        name ="32"
                     />
                     <SympComp
                         label = "Is worried or anxious about things"
-                        name =""
+                        name ="33"
                     />
                     <SympComp
                         label = "Is sad, depressed, low mood, tearful"
-                        name =""
+                        name ="34"
                     />
                     <SympComp
                         label = "Is irritated easily by things or crabby feeling"
-                        name =""
+                        name ="35"
                     />
                     <SympComp
                         label = "Reacts emotionally i.e. yelling, slamming doors"
-                        name =""
+                        name ="36"
                     />
                     <SympComp
                         label = "Tics or movements, twitches, jerks or noises"
-                        name =""
+                        name ="37"
                     />
                     <SympComp
                         label = "Habits such as nail biting or skin picking"
-                        name =""
+                        name ="38"
                     />
                     <SympComp
                         label = "Decreased appetite"
-                        name =""
+                        name ="39"
                     />
                     <SympComp
                         label = "Difficulty falling asleep"
-                        name =""
+                        name ="40"
                     />
 
 
