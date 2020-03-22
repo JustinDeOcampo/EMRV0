@@ -57,7 +57,7 @@ class DateInputComp extends React.Component{
     render(){
         return(
             <div style = {{paddingLeft: '12px'}}>
-                <div style = {{paddingTop: '7px'}}>
+                <div style = {{paddingTop: '15px'}}>
                     <label>
                         Date of Birth:
                     </label>

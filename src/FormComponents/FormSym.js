@@ -1,10 +1,11 @@
 import React from 'react'
 import {SympComp} from "../Components/RadioComp";
+import '../styles/myStyles.css'
 
 class FormSym extends React.Component {
     render() {
         return (
-            <div>
+            <div className = "form-sym">
                 <main>
                     <h2 style={{textAlign: 'center'}}>Symptom Checklist Parent (Vanderbilt Modified Form)</h2>
                     <p>Please rate each symptom by selecting the number that best describes the symptoms or severity of challenge.</p>

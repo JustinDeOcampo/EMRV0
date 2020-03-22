@@ -1,11 +1,11 @@
 import React from 'react'
-import {Row, Form, Divider} from "antd";
+import {Row, Form} from "antd";
 import {TextFieldComp, DateInputComp} from "../Components/TextFieldComp";
 import DatePickerComp from "../Components/DatePickerComp";
 import {RadioComp2} from "../Components/RadioComp";
 import TextAreaComp from "../Components/TextAreaComp";
 import DropDownComp from "../Components/DropDownComp";
-import DrawerComp from "../Components/DrawerComp";
+import '../styles/myStyles.css'
 
 const layout = {
     labelCol: {
@@ -42,11 +42,11 @@ class FormDev extends React.Component{
                                 <DatePickerComp
                                     label = "Date:"
                                 />
+                            <DateInputComp/>
                         </Row>
 
                         {/*Fix this to display appropriate dates*/}
                         <Row gutter={[8, 0]}>
-                            <DateInputComp/>
                             <TextFieldComp
                                 label = "Age: "
                                 placeholder = "Enter Age"
