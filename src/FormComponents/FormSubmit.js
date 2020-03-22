@@ -2,6 +2,7 @@ import React from 'react'
 import {Form, Input, Button, Row} from 'antd';
 import '../styles/style.css'
 import Text from "antd/es/typography/Text";
+import PatientDocumentExportButton from '../PdfComponents/PatientDocumentExportButton';
 
 const layout = {
     labelCol: { span: 8 },
@@ -33,6 +34,8 @@ class FormSubmit extends React.Component{
                 </div>
 
                 <div className = "centered">
+                  <PatientDocumentExportButton patientData={{}}/>
+                  
                     <Form
                         name="basic"
                         initialValues={{ remember: true }}

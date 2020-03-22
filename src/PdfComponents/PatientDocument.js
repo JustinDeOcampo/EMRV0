@@ -1,6 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Document } from '@react-pdf/renderer';
+import FormDevPdfPage from './FormDevPdfPage';
+import FormSymPdfPage from './FormSymPdfPage';
 
 class PatientDocument extends React.Component {
   render() {

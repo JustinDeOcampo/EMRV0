@@ -2,6 +2,7 @@ import React from 'react';
 import {Button, Form} from 'antd';
 import PropTypes from 'prop-types';
 import {PDFDownloadLink} from '@react-pdf/renderer';
+import PatientDocument from './PatientDocument';
 
 class PatientDocumentExportButton extends React.Component {
   render() {
