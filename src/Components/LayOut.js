@@ -4,7 +4,7 @@ import FormDev from "../FormComponents/FormDev";
 import FormSym from "../FormComponents/FormSym";
 import FormSubmit from "../FormComponents/FormSubmit";
 
-const { Header } = Layout;
+const { Header, Footer } = Layout;
 
 
 
