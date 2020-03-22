@@ -5,21 +5,28 @@ import * as jsPDF from 'jspdf';
 import * as PropTypes from 'prop-types';
 
 export default class Export extends Component {
+  buttonStatesEnum = Object.freeze({
+    READY: "Export to PDF",
+    LOADING: "Exporting PDF",
+    FAILED: "PDF Export Failed. Retry?"
+  });
+
+
   constructor(props) {
     super(props);
     this.state = {
-      ready: "READY"
+      buttonState: this.buttonStatesEnum.READY
     };
   }
 
   async printDocument(pdfName, div_id) {
+    this.setState({ buttonState: this.buttonStatesEnum.LOADING });
+
     const input = document.getElementById(div_id);
     html2canvas(input, {
       scrollX: 0,
       scrollY: -window.scrollY
     }).then((canvas) => {
-        // console.log(scrollPos)
-        // window.scrollTo(0,scrollPos);
         const imgData = canvas.toDataURL('image/png');
         let pdf = new jsPDF('p', 'mm');
         let position = 0;
@@ -38,22 +45,27 @@ export default class Export extends Component {
           heightLeft -= pageHeight;
         }
         pdf.save(pdfName + ".pdf");
-      })
+        this.setState({ buttonState: this.buttonStatesEnum.READY });
+      }).catch((error) =>{
+        console.log(error);
+        this.setState({ buttonState: this.buttonStatesEnum.FAILED });
+    })
     ;
   }
 
   render() {
     const { pdfName, divIdToPrint } = this.props;
+    const { buttonState } = this.state;
+
     return (
     <div>
-      <div id="myMm" style={{height: "1mm"}} />
-      <div className="mb5">
-        <Button size='large'
+        <Button size="large"
                 type="primary"
+                loading={buttonState === this.buttonStatesEnum.LOADING}
+                danger={buttonState === this.buttonStatesEnum.FAILED}
                 onClick={() => this.printDocument(pdfName, divIdToPrint)}>
-          Export to PDF
+          {buttonState}
         </Button>
-      </div>
     </div>);
   }
 }
