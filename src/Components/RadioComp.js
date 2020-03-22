@@ -9,6 +9,7 @@ import {Radio, Col, Row, Form,Input} from 'antd';
 />
 */}
 
+/*component for radio buttons with an "other" option attached*/
 class RadioOtherComp extends React.Component {
     state = {
         value: 1,
@@ -46,6 +47,7 @@ class RadioOtherComp extends React.Component {
     }
 }
 
+/*component for radio buttons with only two options*/
 class RadioComp2 extends React.Component {
     state = {
         value: 1,
@@ -81,6 +83,10 @@ class RadioComp2 extends React.Component {
     }
 }
 
+{/*
+component for the symptom checklist radio buttons. this is its own component
+because every radio group is the same on this page
+*/}
 class SympComp extends React.Component{
     state = {
         value: 1,
