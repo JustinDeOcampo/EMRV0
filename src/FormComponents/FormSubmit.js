@@ -1,6 +1,6 @@
 import React from 'react'
 import {Form, Input, Button, Row} from 'antd';
-import '../styles/myStyles.css'
+import '../styles/style.css'
 import Text from "antd/es/typography/Text";
 
 const layout = {

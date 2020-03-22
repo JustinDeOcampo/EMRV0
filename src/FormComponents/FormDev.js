@@ -5,7 +5,7 @@ import DatePickerComp from "../Components/DatePickerComp";
 import {RadioComp2} from "../Components/RadioComp";
 import TextAreaComp from "../Components/TextAreaComp";
 import DropDownComp from "../Components/DropDownComp";
-import '../styles/myStyles.css'
+import '../styles/style.css'
 
 const layout = {
     labelCol: {

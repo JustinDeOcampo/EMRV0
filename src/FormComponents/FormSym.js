@@ -1,6 +1,6 @@
 import React from 'react'
 import {SympComp} from "../Components/RadioComp";
-import '../styles/myStyles.css'
+import '../styles/style.css'
 
 class FormSym extends React.Component {
     render() {
