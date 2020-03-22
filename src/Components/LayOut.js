@@ -61,7 +61,7 @@ class LayOut extends React.Component {
                     <h1 style = {{color: 'white'}}>Melmed Center</h1>
                 </Header>
 
-                <ExportButton/>
+                <ExportButton divIdToPrint={"form-content-to-pdf"}/>
 
                 <div style = {{margin: 32}}>
                     {/*Renders first, second, and the submit step */}
@@ -72,7 +72,7 @@ class LayOut extends React.Component {
                     </Steps>
 
                     {/*Renders the content of the current step*/}
-                    <div className="steps-content" id="divToPrint">
+                    <div className="steps-content" id="form-content-to-pdf">
                         {steps[current].content}
                     </div>
 

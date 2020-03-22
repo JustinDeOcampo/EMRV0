@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import html2canvas from 'html2canvas';
 import {Button} from 'antd';
 import * as jsPDF from 'jspdf';
+import * as PropTypes from 'prop-types';
 
 export default class Export extends Component {
   constructor(props) {
@@ -20,7 +21,7 @@ export default class Export extends Component {
         const imgData = canvas.toDataURL('image/png');
         let pdf = new jsPDF('p', 'mm');
         let position = 0;
-        let imgWidth = 210;
+        let imgWidth = pdf.internal.pageSize.getWidth();
         let pageHeight = 295;
         let imgHeight = canvas.height * imgWidth / canvas.width;
         let heightLeft = imgHeight;
@@ -40,12 +41,17 @@ export default class Export extends Component {
   }
 
   render() {
+    const { divIdToPrint } = this.props;
     return (
     <div>
       <div id="myMm" style={{height: "1mm"}} />
       <div className="mb5">
-        <Button onClick={() => this.printDocument('divToPrint')}>Print</Button>
+        <Button onClick={() => this.printDocument(divIdToPrint)}>Print</Button>
       </div>
     </div>);
   }
 }
+
+Export.propTypes = {
+  divIdToPrint: PropTypes.string.isRequired
+};
