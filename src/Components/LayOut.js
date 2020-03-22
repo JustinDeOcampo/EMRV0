@@ -32,9 +32,7 @@ class LayOut extends React.Component {
                     <FormSym/>
                     <FormSubmit/>
                 </div>
-
-
-
+                <Footer style={{textAlign: 'center'}}>4848 E. Cactus Rd. Ste. #940, Scottsdale, AZ 85254 | Phone (480) 443-0050 | Fax (480) 443-4018 | Toll Free 877-587-1770</Footer>
             </div>
 
             /*Layout>
