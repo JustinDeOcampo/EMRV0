@@ -1,6 +1,6 @@
 import React from 'react'
 import {Row, Form, Divider} from "antd";
-import {TextFieldComp} from "../Components/TextFieldComp";
+import {TextFieldComp, DateInputComp} from "../Components/TextFieldComp";
 import DatePickerComp from "../Components/DatePickerComp";
 import {RadioComp2} from "../Components/RadioComp";
 import TextAreaComp from "../Components/TextAreaComp";
@@ -46,9 +46,7 @@ class FormDev extends React.Component{
 
                         {/*Fix this to display appropriate dates*/}
                         <Row gutter={[8, 0]}>
-                            <DatePickerComp
-                                label = "Date of Birth:"
-                            />
+                            <DateInputComp/>
                             <TextFieldComp
                                 label = "Age: "
                                 placeholder = "Enter Age"
