@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import html2canvas from 'html2canvas';
-import {Button, Form} from 'antd';
+import {Button} from 'antd';
 import * as jsPDF from 'jspdf';
 import * as PropTypes from 'prop-types';
 
@@ -11,17 +11,16 @@ export default class Export extends Component {
 
   async printDocument(div_id) {
     const input = document.getElementById(div_id);
-    await html2canvas(input, {
-      windowWidth: input.scrollWidth,
-      windowHeight: input.scrollHeight
-    });
-
-    html2canvas(input)
-      .then((canvas) => {
+    html2canvas(input, {
+      scrollX: 0,
+      scrollY: -window.scrollY
+    }).then((canvas) => {
+        // console.log(scrollPos)
+        // window.scrollTo(0,scrollPos);
         const imgData = canvas.toDataURL('image/png');
         let pdf = new jsPDF('p', 'mm');
         let position = 0;
-        let imgWidth = pdf.internal.pageSize.getWidth();
+        let imgWidth = 210;
         let pageHeight = 295;
         let imgHeight = canvas.height * imgWidth / canvas.width;
         let heightLeft = imgHeight;
