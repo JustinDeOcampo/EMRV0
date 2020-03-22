@@ -28,15 +28,11 @@ class LayOut extends React.Component {
                 <Header style={{ zIndex: 1, width: '100%', height: '85px'}}>
                     <h1 style = {{color: 'white'}}>Melmed Center</h1>
                 </Header>
-                <div style = {{paddingLeft: '20px'}}>
+                <div style = {{paddingLeft: '20px'}} id="form-content-to-pdf">
                     <FormDev/>
                     <FormSym/>
-                    <FormSubmit/>
                 </div>
-
-                <ExportButton divIdToPrint={"form-content-to-pdf"}/>
-
-
+              <FormSubmit/>
             </div>
 
             /*Layout>

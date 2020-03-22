@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import html2canvas from 'html2canvas';
-import {Button} from 'antd';
+import {Button, Form} from 'antd';
 import * as jsPDF from 'jspdf';
 import * as PropTypes from 'prop-types';
 
@@ -46,7 +46,12 @@ export default class Export extends Component {
     <div>
       <div id="myMm" style={{height: "1mm"}} />
       <div className="mb5">
-        <Button onClick={() => this.printDocument(divIdToPrint)}>Print</Button>
+        <Button size='large'
+                type="primary"
+                htmlType="submit"
+                onClick={() => this.printDocument(divIdToPrint)}>
+          Print
+        </Button>
       </div>
     </div>);
   }
