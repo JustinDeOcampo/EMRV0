@@ -2,6 +2,7 @@ import React from 'react'
 import {Form, Input, Button, Row} from 'antd';
 import '../styles/style.css'
 import Text from "antd/es/typography/Text";
+import ExportButton from '../Components/ExportButton';
 
 const layout = {
     labelCol: { span: 8 },
@@ -13,14 +14,6 @@ const layout = {
 class FormSubmit extends React.Component{
 
     render(){
-        const onFinish = values => {
-            console.log('Success:', values);
-        };
-
-        const onFinishFailed = errorInfo => {
-            console.log('Failed:', errorInfo);
-        };
-
         return(
             <div style ={{paddingTop: '30px'}}>
 
@@ -33,18 +26,7 @@ class FormSubmit extends React.Component{
                 </div>
 
                 <div className = "centered">
-                    <Form
-                        name="basic"
-                        initialValues={{ remember: true }}
-                        onFinish={onFinish}
-                        onFinishFailed={onFinishFailed}
-                    >
-                        <Form.Item >
-                            <Button size='large' type="primary" htmlType="submit">
-                                Submit
-                            </Button>
-                        </Form.Item>
-                    </Form>
+                  <ExportButton divIdToPrint={"form-content-to-pdf"}/>
                 </div>
             </div>
 
