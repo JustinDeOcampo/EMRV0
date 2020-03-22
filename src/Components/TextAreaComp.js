@@ -22,7 +22,7 @@ export class TextAreaComp extends React.Component {
                     name = {this.props.name}
                 >
                 <h3>{this.props.label}</h3>
-                    <TextArea style ={{width: 750}} rows = {5} />
+                    <TextArea style ={{width: 1000}} rows = {5} />
 
                 </Form.Item>
             </Col>

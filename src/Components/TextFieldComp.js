@@ -1,5 +1,6 @@
 import React from 'react'
 import {Row, Col, Input, Select,Cascader } from 'antd';
+import MaskedInput from 'react-maskedinput'
 
 
 {/*
@@ -17,10 +18,11 @@ class TextFieldComp extends React.Component {
         return (
             <Col  style ={{margin: '7px' }} span = {4}>
                 <Row>
-                    <label >{this.props.label}</label>
+                    <label style = {{width: '300px'}} >{this.props.label}</label>
                 </Row>
 
                 <Input
+                    style = {{width: '100%' }}
                     placeholder = {this.props.placeholder}
                     suffix = {this.props.suffix}
                 />
@@ -50,6 +52,35 @@ class TextFieldGroupComp extends React.Component{
     }
 }
 
+
+class DateInputComp extends React.Component{
+    render(){
+        return(
+            <div style = {{paddingLeft: '12px'}}>
+                <div style = {{paddingTop: '15px'}}>
+                    <label>
+                        Date of Birth:
+                    </label>
+                </div>
+                <MaskedInput
+                    mask="11/11/1111"
+                    placeholder="MM/DD/YYYY"
+                    size="11"
+                    {...this.props}
+
+                    formatCharacters={{
+                        'W': {
+                            validate(char) { return /\w/.test(char ) },
+                            transform(char) { return char.toUpperCase() }
+                        }
+                    }
+                    }/>
+            </div>
+
+        )
+    }
+}
+
 {/*class NumFieldComp extends React.Component{
     render(){
         function onChange(value) {
@@ -67,4 +98,4 @@ class TextFieldGroupComp extends React.Component{
     }
 }
 */}
-export {TextFieldComp, TextFieldGroupComp}
+export {TextFieldComp, TextFieldGroupComp, DateInputComp}
