@@ -62,8 +62,7 @@ class RadioComp2 extends React.Component {
         const {myProp} = this.props;
         return (
 
-            <Col style = {{paddingLeft: '25px'}} span = {8}>
-                <div>
+            <div style = {{paddingLeft: '20px'}} className = "item-1">
                     <div style = {{paddingTop: '6px'}}>
                         <label>{this.props.label}</label>
                     </div>
@@ -77,8 +76,7 @@ class RadioComp2 extends React.Component {
                             </Radio>
                         </Radio.Group>
                     </Row>
-                </div>
-            </Col>
+            </div>
         )
     }
 }

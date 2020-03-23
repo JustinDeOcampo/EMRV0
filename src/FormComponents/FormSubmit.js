@@ -1,5 +1,4 @@
 import React from 'react'
-
 import '../styles/style.css'
 import ExportButton from '../Components/ExportButton';
 
@@ -25,11 +24,10 @@ class FormSubmit extends React.Component{
                     {"Please click below to submit and export."}
                 </div>
 
-                <div style = {{paddingBottom: '10px'}} className={"centered"}>
+                <div style = {{paddingBottom: '50px'}} className={"centered"}>
                   <ExportButton divIdToPrint="form-content-to-pdf" pdfName="melmed-forms"/>
                 </div>
             </div>
-
         )
     }
 }
