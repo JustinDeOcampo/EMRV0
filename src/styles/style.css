@@ -43,6 +43,12 @@ body {
   align-items: flex-start;
   flex-wrap: wrap;
 }
+.container-v {
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
 #textarea {
   height: 0px;
   width: 600px;
@@ -61,5 +67,4 @@ body {
   resize: both;
   width: 100%;
 }
-/*# sourceMappingURL=style.css.map */
 /*# sourceMappingURL=style.css.map */
