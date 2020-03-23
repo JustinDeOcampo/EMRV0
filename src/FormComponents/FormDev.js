@@ -1,13 +1,15 @@
 import React from 'react'
-import {Row, Form, Input} from "antd";
-import {TextFieldComp, DateInputComp} from "../Components/TextFieldComp";
-import DatePickerComp from "../Components/DatePickerComp";
+import {Row, Form} from "antd";
+import {TextFieldComp, DateInputComp, CurrentDateComp} from "../Components/TextFieldComp";
+import {DatePickerComp} from "../Components/DatePickerComp";
 import {RadioComp2} from "../Components/RadioComp";
 import TextAreaComp from "../Components/TextAreaComp";
 import DropDownComp from "../Components/DropDownComp";
-import FormSym from "./FormSym";
-import FormSubmit from "./FormSubmit";
+import {gradeInputs, relationshipInputs} from "../Components/DropDownOptions"
 import '../styles/style.css'
+
+
+
 
 
 
@@ -15,12 +17,11 @@ class FormDev extends React.Component{
     render() {
         return (
             <div>
-                <main>
                     <Form
                         name = "FormDev"
                     >
                         <h2 style={{textAlign: 'center'}}>Developmental Consultation</h2>
-                        <Row gutter={[16, 16]}>
+                        <div className={"container"} >
                                 <TextFieldComp
                                     label = "Name of Child: "
                                     placeholder = "Enter name of child"
@@ -32,25 +33,25 @@ class FormDev extends React.Component{
                                     placeholder = "Enter name"
                                     name = "personCompleting"
                                 />
-                            {/*Fix the spacing*/}
-                                <DatePickerComp
+                                <CurrentDateComp
                                     label = "Date:"
                                 />
-                            <DateInputComp/>
-                        </Row>
+                            <DateInputComp
+                                label = "Date of Birth:"
+                            />
+                        </div>
 
                         {/*Fix this to display appropriate dates*/}
-                        <Row gutter={[8, 0]}>
+                        <div className={"container"} >
                             <TextFieldComp
                                 label = "Age: "
                                 placeholder = "Enter Age"
                                 name = "age"
                             />
                             {/*add pre-k - senior in high school, college*/}
-                            <TextFieldComp
+                            <DropDownComp
                                 label = "Grade: "
-                                placeholder = "Enter Grade"
-                                name = "grade"
+                                arrayOfData = {gradeInputs}
                             />
                             {/* Templates could go here of all schools in az*/}
                             <TextFieldComp
@@ -60,12 +61,12 @@ class FormDev extends React.Component{
                             />
                             <TextFieldComp
                                 label = "PCP: "
-                                placeholder = "Enter PCP"
+                                placeholder = "Enter Primary care provider"
                                 name = "pcp"
                             />
-                        </Row>
+                        </div>
 
-                        <Row>
+                        <div className={"container"} >
                             <TextFieldComp
                                 label = "Accompanied by: "
                                 placeholder = "Enter name"
@@ -73,14 +74,19 @@ class FormDev extends React.Component{
                             />
                             {/* Fix this to have preset options already*/}
                             <DropDownComp
-                            label = "Relationship to Child?"
+                                label = "Relationship to Child?"
+                                arrayOfData = {relationshipInputs}
                             />
-                            <RadioComp2
-                                label = "Are you the legal guardian?"
-                                a = "Y"
-                                b = "N"
-                            />
-                        </Row>
+                            <div className = "item-1">
+                            </div>
+                            <div className = "item-1">
+                            </div>
+                        </div>
+                        <RadioComp2
+                            label = "Are you the legal guardian?"
+                            a = "Y"
+                            b = "N"
+                        />
                         <h1>I. History</h1>
                             <TextAreaComp
                                 label = "A. What is your chief concern/current diagnosis?"
@@ -89,7 +95,6 @@ class FormDev extends React.Component{
                             />
 
                  </Form>
-                </main>
             </div>
         );
     }

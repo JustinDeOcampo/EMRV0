@@ -1,22 +1,14 @@
 import React from 'react'
-import {Form, Input, Button, Row} from 'antd';
 import '../styles/style.css'
-import Text from "antd/es/typography/Text";
 import ExportButton from '../Components/ExportButton';
-
-const layout = {
-    labelCol: { span: 8 },
-    wrapperCol: { span: 16 },
-};
-
-
+import * as PropTypes from 'prop-types';
 
 class FormSubmit extends React.Component{
 
     render(){
-        return(
-            <div style ={{paddingTop: '30px'}}>
-
+      const { divIdsToPrint } = this.props;
+      return(
+            <div>
                 <div className={"centered"}>
                     {"You are now finished with the form."}
                 </div>
@@ -25,13 +17,16 @@ class FormSubmit extends React.Component{
                     {"Please click below to submit and export."}
                 </div>
 
-                <div className = "centered">
-                  <ExportButton divIdToPrint={"form-content-to-pdf"}/>
+                <div style = {{paddingBottom: '50px'}} className={"centered"}>
+                  <ExportButton divIdsToPrint={divIdsToPrint} pdfName="melmed-forms"/>
                 </div>
             </div>
-
         )
     }
 }
+
+FormSubmit.propTypes = {
+  divIdsToPrint: PropTypes.arrayOf(PropTypes.string).isRequired
+};
 
 export default FormSubmit

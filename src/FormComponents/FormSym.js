@@ -1,5 +1,6 @@
 import React from 'react'
 import {SympComp} from "../Components/RadioComp";
+import {Divider} from "antd";
 import '../styles/style.css'
 
 class FormSym extends React.Component {
@@ -172,7 +173,7 @@ class FormSym extends React.Component {
                         label = "Difficulty falling asleep"
                         name ="40"
                     />
-
+                    <Divider/>
 
 
                 </main>
