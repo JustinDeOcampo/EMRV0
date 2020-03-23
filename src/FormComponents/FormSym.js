@@ -111,6 +111,7 @@ class FormSym extends React.Component {
                                 label = "Aggressive verbally"
                                 name ="27"
                             />
+
                             <SympComp
                                 label = "Aggressive physically"
                                 name ="28"
