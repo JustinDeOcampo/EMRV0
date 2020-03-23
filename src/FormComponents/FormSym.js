@@ -100,21 +100,6 @@ class FormSym extends React.Component {
                                 name ="21"
                             />
                             <SympComp
-                                label = "Challenges in the morning routine"
-                                name ="22"
-                            />
-                            <SympComp
-                                label = "Difficulty with time management"
-                                name ="23"
-                            />
-                            <SympComp
-                                label = "Difficulty with siblings"
-                                name ="24"
-                            />
-
-                        </div>
-                        <div style = {{paddingLeft: '20px'}} className = "container-v">
-                            <SympComp
                                 label = "Difficulty managing anger or disappointment"
                                 name ="25"
                             />
@@ -133,11 +118,14 @@ class FormSym extends React.Component {
                             <SympComp
                                 label = "Mood changes quickly and drastically"
                                 name ="29"
-                                />
+                            />
                             <SympComp
                                 label = "Less social with friends, looks dull or flat"
                                 name ="30"
                             />
+
+                        </div>
+                        <div className = "container-v">
                             <SympComp
                                 label = "Is tired during the day"
                                 name ="31"

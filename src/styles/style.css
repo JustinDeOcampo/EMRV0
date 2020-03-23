@@ -48,6 +48,7 @@ body {
   align-items: flex-start;
   flex-wrap: wrap;
   flex-direction: column;
+  padding-left: 15px;
 }
 #textarea {
   height: 0px;
@@ -67,4 +68,5 @@ body {
   resize: both;
   width: 100%;
 }
+/*# sourceMappingURL=style.css.map */
 /*# sourceMappingURL=style.css.map */
