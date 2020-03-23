@@ -1,6 +1,9 @@
 import React from 'react'
 import {Row, Col, Input, Select,Cascader } from 'antd';
+import {DateTodayComp} from './DatePickerComp'
+import MaskedInput from 'react-maskedinput'
 
+import '../styles/style.css'
 
 {/*
 Template
@@ -15,18 +18,21 @@ class TextFieldComp extends React.Component {
     render() {
         const {myProp} = this.props;
         return (
-            <Col  style ={{margin: '7px' }} span = {4}>
+
+            <div  style ={{margin: '8px' }} className = "item-1">
                 <Row>
-                    <label >{this.props.label}</label>
+                    <label>{this.props.label}</label>
                 </Row>
-
                 <Input
+                    style = {{width: '260px' }}
+                    name = {this.props.name}
+                    id = {this.props.id}
                     placeholder = {this.props.placeholder}
-                    suffix = {this.props.suffix}
+                    onChange = {this.props.onChange}
+                    onBlur = {this.props.onBlur}
+                    value = {this.props.value}
                 />
-
-
-            </Col>
+            </div>
         )
     }
 }
@@ -50,6 +56,47 @@ class TextFieldGroupComp extends React.Component{
     }
 }
 
+class DateInputComp extends React.Component{
+    render(){
+        return(
+                <div style = {{paddingLeft: '15px'}} className = "item-1">
+                    <div style = {{paddingTop: '8px'}}>
+                        <label>
+                            Date of Birth:
+                        </label>
+                    </div>
+                    <MaskedInput
+                        style = {{width: '260px'}}
+                        mask="11/11/1111"
+                        placeholder="MM/DD/YYYY"
+                        size="11"
+                        {...this.props}
+
+                        formatCharacters={{
+                            'W': {
+                                validate(char) { return /\w/.test(char ) },
+                                transform(char) { return char.toUpperCase() }
+                            }
+                        }
+                        }/>
+                </div>
+        )
+    }
+}
+class CurrentDateComp extends React.Component{
+    render(){
+        return(
+            <div style ={{margin: '1px', paddingTop:'6px', width: '260px' }} className = "item-1">
+                <Row>
+                    <label>{this.props.label}</label>
+                </Row>
+                <DateTodayComp/>
+            </div>
+
+        )
+    }
+}
+
 {/*class NumFieldComp extends React.Component{
     render(){
         function onChange(value) {
@@ -67,4 +114,4 @@ class TextFieldGroupComp extends React.Component{
     }
 }
 */}
-export {TextFieldComp, TextFieldGroupComp}
+export {TextFieldComp, TextFieldGroupComp, DateInputComp, CurrentDateComp}

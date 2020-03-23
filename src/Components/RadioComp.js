@@ -9,6 +9,7 @@ import {Radio, Col, Row, Form,Input} from 'antd';
 />
 */}
 
+/*component for radio buttons with an "other" option attached*/
 class RadioOtherComp extends React.Component {
     state = {
         value: 1,
@@ -19,7 +20,6 @@ class RadioOtherComp extends React.Component {
             value: e.target.value,
         });
     };
-
     render(){
         const {myProp} = this.props;
         return(
@@ -47,6 +47,7 @@ class RadioOtherComp extends React.Component {
     }
 }
 
+/*component for radio buttons with only two options*/
 class RadioComp2 extends React.Component {
     state = {
         value: 1,
@@ -61,25 +62,29 @@ class RadioComp2 extends React.Component {
         const {myProp} = this.props;
         return (
 
-            <Col span = {4}>
-                <Form.Item
-                    name = {this.props.name}
-                    label = {this.props.label}
-                >
-                <Radio.Group onChange={this.onChange} value={this.state.value}>
-                    <Radio value={1}>
-                        {this.props.a}
-                    </Radio>
-                    <Radio  value={2}>
-                        {this.props.b}
-                    </Radio>
-                </Radio.Group>
-                </Form.Item>
-            </Col>
+            <div style = {{paddingLeft: '20px'}} className = "item-1">
+                    <div style = {{paddingTop: '6px'}}>
+                        <label>{this.props.label}</label>
+                    </div>
+                    <Row>
+                        <Radio.Group style ={{paddingTop:'7px'}}onChange={this.onChange} value={this.state.value}>
+                            <Radio value={1}>
+                                {this.props.a}
+                            </Radio>
+                            <Radio  value={2}>
+                                {this.props.b}
+                            </Radio>
+                        </Radio.Group>
+                    </Row>
+            </div>
         )
     }
 }
 
+{/*
+component for the symptom checklist radio buttons. this is its own component
+because every radio group is the same on this page
+*/}
 class SympComp extends React.Component{
     state = {
         value: 1,
@@ -90,10 +95,13 @@ class SympComp extends React.Component{
             value: e.target.value,
         });
     };
+
     render(){
         const {myProp} = this.props;
         return(
-           <Form.Item>
+           <Form.Item
+               name = {this.props.name}
+           >
                <Radio.Group onChange={this.onChange} value={this.state.value}>
                    <Radio value={1}>0</Radio>
                    <Radio value={2}>1</Radio>
