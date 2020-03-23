@@ -55,7 +55,7 @@ export default class Export extends Component {
     try {
       pdf.save(pdfName + ".pdf");
       this.setState({ buttonState: this.buttonStatesEnum.READY });
-    } catch(err) {
+    } catch(error) {
       console.log(error);
       this.setState({ buttonState: this.buttonStatesEnum.FAILED });
     }
