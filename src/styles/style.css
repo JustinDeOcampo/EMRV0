@@ -1,30 +1,30 @@
 body {
-  font-size: 18px;
+  font-size: 22px;
 }
 .ant-form label {
-  font-size: 18px;
+  font-size: 22px;
 }
 .ant-form {
-  font-size: 18px;
+  font-size: 22px;
 }
 .ant-input {
-  font-size: 18px;
+  font-size: 22px;
 }
 .ant-select {
-  font-size: 18px;
+  font-size: 22px;
 }
 .ant-divider {
   color: black;
   background-color: black;
 }
 .ant-form-item {
-  font-size: 18px;
+  font-size: 22px;
 }
 .ant-radio-group {
-  font-size: 18px;
+  font-size: 26px;
 }
 .ant-radio-wrapper {
-  font-size: 18px;
+  font-size: 26px;
 }
 .ant-layout-footer {
   font-size: 16px;
