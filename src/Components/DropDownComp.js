@@ -1,7 +1,7 @@
 import React from 'react'
 import { Col, Select, Divider, Input, Row} from 'antd';
 import { PlusOutlined } from '@ant-design/icons';
-
+import '../styles/style.css'
 const { Option } = Select;
 
 let index = 0;
@@ -16,7 +16,13 @@ where you can add a new item,
  2. search for existing items
  */}
 
+
+
 class DropDownComp extends React.Component {
+    constructor(props){
+        super(props)
+    }
+
     state = {
         items: [],
         name: '',
@@ -36,22 +42,37 @@ class DropDownComp extends React.Component {
     };
     render() {
         const { items, name } = this.state;
-        const {myProp} = this.props;
+        const {myProp, arrayOfData} = this.props;
+
+
+        //if the array data exists
+            let options1 = arrayOfData.map((data) =>
+                <Option
+                    key = {data.id}
+                    value = {data.id}
+                >
+                    {data.name}
+                </Option>
+            );
+
+
         return (
-            <div style = {{paddingLeft: '10px'}}>
+            <div style = {{paddingLeft: '10px'}} className = "item-1">
                 <Col >
                     <div style = {{paddingTop: '6px'}}>
                         <label> {this.props.label} </label>
                     </div>
                     <Select
-                        style={{ width: '267px', paddingTop:'2px'}}
+                        style={{ width: '260px', paddingTop:'1px'}}
                         placeholder="Click here"
                         dropdownRender={menu => (
                             <div>
                                 {/*rendering menu*/}
                                 {menu}
 
+
                                 <Divider style={{ margin: '4px 0' }} />
+
                                 {/*button for adding item*/}
                                 <div style={{ display: 'flex', flexWrap: 'nowrap', padding: 8 }}>
                                     <Input style={{ flex: 'auto' }} value={name} onChange={this.onNameChange} />
@@ -66,6 +87,7 @@ class DropDownComp extends React.Component {
                             </div>
                         )}
                     >
+                        {options1}
                         {items.map(item => (
                             <Option key={item}>{item}</Option>
                         ))}
