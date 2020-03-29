@@ -1,67 +1,67 @@
 export const gradeInputs = [
     {
         id: '1',
-        name: "Pre-K"
+        name : "Pre-K"
     },
     {
         id: '2',
-        name: "Kindergarten"
+        name : "Kindergarten"
     },
     {
         id: '3',
-        name: "1st Grade"
+        name : "1st Grade"
     },
     {
         id: '4',
-        name: "2nd Grade"
+        name : "2nd Grade"
     },
     {
         id: '5',
-        name: "3rd Grade"
+        name : "3rd Grade"
     },
     {
         id: '6',
-        name: "4th Grade"
+        name : "4th Grade"
     },
     {
         id: '7',
-        name: "5th Grade"
+        name : "5th Grade"
     },
     {
         id: '8',
-        name: "6th Grade"
+        name : "6th Grade"
     },
     {
         id: '9',
-        name: "7th Grade"
+        name : "7th Grade"
     },
     {
         id: '10',
-        name: "8th Grade"
+        name : "8th Grade"
     },
     {
         id: '11',
-        name: "Freshman"
+        name : "Freshman"
     },
     {
         id: '12',
-        name: "Sophomore"
+        name : "Sophomore"
     },
     {
         id: '13',
-        name: "Junior"
+        name : "Junior"
     },
     {
         id: '14',
-        name: "Senior"
+        name : "Senior"
     },
     {
         id: '15',
-        name: "College"
+        name : "College"
     },
     {
         id: '16',
-        name: "Working"
+        name : "Working"
     }
 ];
 
@@ -82,4 +82,4 @@ export const relationshipInputs = [
         id: "4",
         name: "Legal Guardian"
     }
-];
+]

@@ -1,11 +1,11 @@
-import {Button, Col, DatePicker, Drawer, Form, Input, Row, Select} from 'antd';
-import {PlusOutlined} from '@ant-design/icons';
+import { Drawer, Form, Button, Col, Row, Input, Select, DatePicker } from 'antd';
+import { PlusOutlined } from '@ant-design/icons';
 import React from "react";
 
-const {Option} = Select;
+const { Option } = Select;
 
 class DrawerComp extends React.Component {
-    state = {visible: false};
+    state = { visible: false };
 
     showDrawer = () => {
         this.setState({
@@ -23,15 +23,15 @@ class DrawerComp extends React.Component {
         const {myProp} = this.props;
         return (
             <div>
-                <Button style={{margin: '10px'}} type="primary" onClick={this.showDrawer}>
-                    <PlusOutlined/> {this.props.buttonLabel}
+                <Button style = {{margin: '10px'}} type="primary" onClick={this.showDrawer}>
+                    <PlusOutlined /> {this.props.buttonLabel}
                 </Button>
                 <Drawer
                     title="Create a new account"
                     width={720}
                     onClose={this.onClose}
                     visible={this.state.visible}
-                    bodyStyle={{paddingBottom: 80}}
+                    bodyStyle={{ paddingBottom: 80 }}
                     footer={
                         <div
                             style={{
@@ -40,7 +40,7 @@ class DrawerComp extends React.Component {
                         >
                             <Button
                                 onClick={this.onClose}
-                                style={{marginRight: 8}}
+                                style={{ marginRight: 8 }}
                             >
                                 Cancel
                             </Button>
@@ -56,19 +56,19 @@ class DrawerComp extends React.Component {
                                 <Form.Item
                                     name="name"
                                     label="Name"
-                                    rules={[{required: true, message: 'Please enter user name'}]}
+                                    rules={[{ required: true, message: 'Please enter user name' }]}
                                 >
-                                    <Input placeholder="Please enter user name"/>
+                                    <Input placeholder="Please enter user name" />
                                 </Form.Item>
                             </Col>
                             <Col span={12}>
                                 <Form.Item
                                     name="url"
                                     label="Url"
-                                    rules={[{required: true, message: 'Please enter url'}]}
+                                    rules={[{ required: true, message: 'Please enter url' }]}
                                 >
                                     <Input
-                                        style={{width: '100%'}}
+                                        style={{ width: '100%' }}
                                         addonBefore="http://"
                                         addonAfter=".com"
                                         placeholder="Please enter url"
@@ -81,7 +81,7 @@ class DrawerComp extends React.Component {
                                 <Form.Item
                                     name="owner"
                                     label="Owner"
-                                    rules={[{required: true, message: 'Please select an owner'}]}
+                                    rules={[{ required: true, message: 'Please select an owner' }]}
                                 >
                                     <Select placeholder="Please select an owner">
                                         <Option value="xiao">Xiaoxiao Fu</Option>
@@ -93,7 +93,7 @@ class DrawerComp extends React.Component {
                                 <Form.Item
                                     name="type"
                                     label="Type"
-                                    rules={[{required: true, message: 'Please choose the type'}]}
+                                    rules={[{ required: true, message: 'Please choose the type' }]}
                                 >
                                     <Select placeholder="Please choose the type">
                                         <Option value="private">Private</Option>
@@ -107,7 +107,7 @@ class DrawerComp extends React.Component {
                                 <Form.Item
                                     name="approver"
                                     label="Approver"
-                                    rules={[{required: true, message: 'Please choose the approver'}]}
+                                    rules={[{ required: true, message: 'Please choose the approver' }]}
                                 >
                                     <Select placeholder="Please choose the approver">
                                         <Option value="jack">Jack Ma</Option>
@@ -119,10 +119,10 @@ class DrawerComp extends React.Component {
                                 <Form.Item
                                     name="dateTime"
                                     label="DateTime"
-                                    rules={[{required: true, message: 'Please choose the dateTime'}]}
+                                    rules={[{ required: true, message: 'Please choose the dateTime' }]}
                                 >
                                     <DatePicker.RangePicker
-                                        style={{width: '100%'}}
+                                        style={{ width: '100%' }}
                                         getPopupContainer={trigger => trigger.parentNode}
                                     />
                                 </Form.Item>
@@ -140,7 +140,7 @@ class DrawerComp extends React.Component {
                                         },
                                     ]}
                                 >
-                                    <Input.TextArea rows={4} placeholder="please enter url description"/>
+                                    <Input.TextArea rows={4} placeholder="please enter url description" />
                                 </Form.Item>
                             </Col>
                         </Row>
