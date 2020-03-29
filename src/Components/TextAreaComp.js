@@ -1,7 +1,7 @@
 import React from 'react'
-import { Col, Input, Form} from 'antd';
+import {Col, Form} from 'antd';
 
-const { TextArea } = Input;
+
 
 
 {/*
@@ -10,19 +10,20 @@ const { TextArea } = Input;
     label = ""
     name = ""
 />
-*/}
+*/
+}
 
 export class TextAreaComp extends React.Component {
     render() {
-        const {myProp} = this.props;
+
         return (
 
-            <Col >
+            <Col>
                 <Form.Item
-                    name = {this.props.name}
+                    name={this.props.name}
                 >
-                <h3>{this.props.label}</h3>
-                    <div id = "textarea" contentEditable="true">
+                    <h3>{this.props.label}</h3>
+                    <div id="textarea" contentEditable="true">
 
                     </div>
                 </Form.Item>
